@@ -1,0 +1,73 @@
+@import "../helps/variables.scss";
+@import "../helps/color.scss";
+
+@mixin inputSize($font-size, $padding, $input-width) {
+  font-size: $font-size;
+
+  .z3-input-number__input {
+    width: $input-width;
+    font-size: $font-size;
+  }
+  .z3-input-number__btn {
+    padding: $padding;
+    .z3-icon {
+      font-size: $font-size;
+    }
+  }
+}
+
+.z3-input-number {
+  display: inline-flex;
+  overflow: hidden;
+  font-size: 28px;
+  background-color: #fff;
+
+  // border-top: 2px #d6e4ef solid;
+  // border-right: 2px #d6e4ef solid;
+  // border-bottom: 2px #d6e4ef solid;
+  // border-left: 2px #d6e4ef solid;
+  // border-radius: 0.17067rem;
+
+  &.default {
+    @include inputSize($font-size-md, 10px 0.5rem, 2.5rem);
+  }
+
+  &.small {
+    @include inputSize($font-size-sm, 5px 0.3rem, 1rem);
+  }
+
+  &.large {
+    @include inputSize($font-size-lg, 15px 0.7rem, 3.5rem);
+  }
+
+  &__input {
+    display: inline-block;
+    width: 2.5rem;
+    height: auto;
+    font-size: 28px;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+    // border-right: 2px #d6e4ef solid;
+    // border-left: 2px #d6e4ef solid;
+    background: #eee;
+    border-radius: 0;
+    input {
+      margin: 12px 0;
+    }
+  }
+
+  &__btn {
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0.5rem;
+    color: #000;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+
+  /* modifiers */
+  &--disabled {
+    color: $color-gray !important;
+  }
+}

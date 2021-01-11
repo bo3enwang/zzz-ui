@@ -1,0 +1,19 @@
+// @import "./helps/variables.scss";
+@import "./components/index.scss";
+@import "./base/content-color.scss";
+@import "./base/line-color.scss";
+@import "./base/shadow.scss";
+
+page {
+  box-sizing: border-box;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+  font-size: 28px;
+  color: var(--black);
+  background: $color-bg-base;
+}
+
+view,
+taro-view-core,
+div {
+  box-sizing: border-box;
+}

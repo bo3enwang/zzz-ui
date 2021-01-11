@@ -1,0 +1,75 @@
+@import "../helps/variables.scss";
+@import "../helps/color.scss";
+
+%item-style {
+  height: 90px;
+  padding: 0 20px;
+  margin: 0 10px;
+  line-height: 90px;
+  text-align: center;
+  &.cur {
+    color: $color-blue;
+    border-bottom: 4px solid $color-blue;
+  }
+}
+
+.z3-tabs {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &__header-scroll {
+    margin-bottom: 10px;
+    white-space: nowrap;
+    background: #fff;
+    &-item {
+      display: inline-block;
+      @extend %item-style;
+    }
+  }
+  &__header {
+    display: flex;
+    margin-bottom: 10px;
+    text-align: center;
+    background: #fff;
+
+    &-item {
+      flex: 1 auto;
+      @extend %item-style;
+    }
+  }
+
+  &__body {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    overflow: visible;
+    white-space: nowrap;
+    transition: all 0.3s;
+    will-change: transform, left, top;
+  }
+}
+
+.z3-tabs-pane {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  white-space: initial;
+  vertical-align: top;
+
+  /* modifiers */
+  &-active {
+    height: auto;
+  }
+
+  &-inactive {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &-vertical {
+    display: block;
+    height: 100%;
+    overflow: scroll;
+  }
+}

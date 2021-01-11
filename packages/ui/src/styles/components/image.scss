@@ -1,0 +1,41 @@
+.z3-image {
+  display: block;
+  overflow: hidden;
+
+  &.round {
+    border-radius: 50%;
+  }
+
+  &__img {
+    height: 0;
+    &.loaded {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: gainsboro;
+    .z3-icon {
+      font-size: 70px;
+    }
+  }
+  &__fail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 28px;
+    color: #969799;
+    text-align: center;
+    background-color: #f7f8fa;
+    &__img {
+      width: 150px;
+    }
+  }
+}

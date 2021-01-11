@@ -1,0 +1,22 @@
+.z3-submit-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  background: #fff;
+
+  &__checkbox {
+    padding: 0 10px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &__total {
+    flex: 1;
+    padding-right: 24px;
+    text-align: right;
+  }
+  &__button {
+    padding-right: 24px;
+  }
+}

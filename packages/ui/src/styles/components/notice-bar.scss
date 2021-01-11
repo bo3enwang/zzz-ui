@@ -1,0 +1,36 @@
+@import "../helps/variables.scss";
+@import "../mixin/ellipsis.scss";
+
+.z3-notice-bar {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 $padding-md;
+  font-size: $font-size-md;
+  line-height: 48px;
+  color: #ed6a0c;
+  background-color: #fffbe8;
+
+  &__wrap {
+    position: relative;
+    flex: 1;
+    height: 48px;
+    overflow: hidden;
+  }
+
+  &__content {
+    position: absolute;
+    white-space: nowrap;
+
+    &.z3-ellipsis {
+      max-width: 100%;
+      @include ellipsis();
+    }
+  }
+  &__left-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+}

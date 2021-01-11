@@ -1,0 +1,92 @@
+$rootClass: z3-swiper;
+
+.#{$rootClass} {
+  box-sizing: border-box;
+  &-item {
+    width: 100%;
+    height: 100%;
+    &__content {
+      width: 100%;
+      height: 100%;
+
+      image,
+      video {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.screen-swiper {
+    min-height: 375px;
+  }
+
+  &.card-swiper {
+    height: 420px !important;
+
+    .#{$rootClass}-item {
+      left: 50px;
+      box-sizing: border-box;
+      width: 610px !important;
+      padding: 40px 0px 70px;
+      overflow: initial;
+
+      &__content {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: all 0.2s ease-in 0s;
+        transform: scale(0.9);
+      }
+
+      &.cur {
+        .#{$rootClass}-item__content {
+          transition: all 0.2s ease-in 0s;
+          transform: none;
+        }
+      }
+    }
+  }
+
+  & .a-swiper-dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+  }
+
+  &[class*="-dot"] .wx-swiper-dots,
+  &[class*="-dot"] .a-swiper-dots,
+  &[class*="-dot"] .uni-swiper-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &.square-dot .wx-swiper-dot,
+  &.square-dot .a-swiper-dot,
+  &.square-dot .uni-swiper-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 8px !important;
+    background-color: #ffffff;
+    border-radius: 20px;
+    opacity: 0.4;
+  }
+
+  &.square-dot .wx-swiper-dot.wx-swiper-dot-active,
+  &.square-dot .a-swiper-dot.a-swiper-dot-active,
+  &.square-dot .uni-swiper-dot.uni-swiper-dot-active {
+    width: 30px;
+    opacity: 1;
+  }
+}

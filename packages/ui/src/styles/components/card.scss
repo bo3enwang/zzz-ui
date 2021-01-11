@@ -1,0 +1,48 @@
+$padding-side: 26px;
+
+.z3-card {
+  display: block;
+  overflow: hidden;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+
+  &__body {
+    padding: $padding-side;
+  }
+
+  &__header {
+    min-height: 70px;
+    padding: 0 $padding-side;
+    margin-bottom: -1px;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+    background: 0 0;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 2px 2px 0 0;
+
+    &::before {
+      display: table;
+      content: "";
+    }
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &-title {
+      display: inline-block;
+      flex: 1;
+      padding: 25px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__cover {
+    > view {
+      display: block;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "../helps/variables.scss";
+@import "../helps/color.scss";
+
+.z3-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+  padding: 0 $padding-side;
+  font-size: $font-size-md;
+  background: #fff;
+  border-bottom: 2px solid #f0f0f0;
+  border-radius: 2px 2px 0 0;
+
+  &-title {
+    font-size: $font-size-lg;
+    color: $color-title;
+
+    &.circle {
+      &:before {
+        display: inline-block;
+        width: 8px * $hd;
+        height: 8px * $hd;
+        margin: 5px * $hd 8px * $hd;
+        vertical-align: middle;
+        content: " ";
+        background: $color-blue;
+        border-radius: 50%;
+      }
+    }
+    &.vertical {
+      &:before {
+        display: inline-block;
+        width: 3px * $hd;
+        height: 13px * $hd;
+        margin: 0 8px * $hd;
+        vertical-align: middle;
+        content: " ";
+        background: $color-blue;
+      }
+    }
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 100%;
+  }
+}

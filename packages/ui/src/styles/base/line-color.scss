@@ -1,0 +1,166 @@
+@import "../helps/color.scss";
+
+.z3-text-red,
+.z3-line-red,
+.z3-lines-red {
+  color: $color-red;
+}
+
+.z3-text-orange,
+.z3-line-orange,
+.z3-lines-orange {
+  color: $color-orange;
+}
+
+.z3-text-yellow,
+.z3-line-yellow,
+.z3-lines-yellow {
+  color: $color-yellow;
+}
+
+.z3-text-olive,
+.z3-line-olive,
+.z3-lines-olive {
+  color: $color-olive;
+}
+
+.z3-text-green,
+.z3-line-green,
+.z3-lines-green {
+  color: $color-green;
+}
+
+.z3-text-cyan,
+.z3-line-cyan,
+.z3-lines-cyan {
+  color: $color-cyan;
+}
+
+.z3-text-blue,
+.z3-line-blue,
+.z3-lines-blue {
+  color: $color-blue;
+}
+
+.z3-text-purple,
+.z3-line-purple,
+.z3-lines-purple {
+  color: $color-purple;
+}
+
+.z3-text-mauve,
+.z3-line-mauve,
+.z3-lines-mauve {
+  color: $color-mauve;
+}
+
+.z3-text-pink,
+.z3-line-pink,
+.z3-lines-pink {
+  color: $color-pink;
+}
+
+.z3-text-brown,
+.z3-line-brown,
+.z3-lines-brown {
+  color: $color-brown;
+}
+
+.z3-text-grey,
+.z3-line-grey,
+.z3-lines-grey {
+  color: $color-grey;
+}
+
+.z3-text-gray,
+.z3-line-gray,
+.z3-lines-gray {
+  color: $color-gray;
+}
+
+.z3-text-black,
+.z3-line-black,
+.z3-lines-black {
+  color: $color-black;
+}
+
+.z3-text-white,
+.z3-line-white,
+.z3-lines-white {
+  color: $color-white;
+}
+
+.z3-line-red::after,
+.z3-lines-red::after {
+  border-color: $color-red;
+}
+
+.z3-line-orange::after,
+.z3-lines-orange::after {
+  border-color: $color-orange;
+}
+
+.z3-line-yellow::after,
+.z3-lines-yellow::after {
+  border-color: $color-yellow;
+}
+
+.z3-line-olive::after,
+.z3-lines-olive::after {
+  border-color: $color-olive;
+}
+
+.z3-line-green::after,
+.z3-lines-green::after {
+  border-color: $color-green;
+}
+
+.z3-line-cyan::after,
+.z3-lines-cyan::after {
+  border-color: $color-cyan;
+}
+
+.z3-line-blue::after,
+.z3-lines-blue::after {
+  border-color: $color-blue;
+}
+
+.z3-line-purple::after,
+.z3-lines-purple::after {
+  border-color: $color-purple;
+}
+
+.z3-line-mauve::after,
+.z3-lines-mauve::after {
+  border-color: $color-mauve;
+}
+
+.z3-line-pink::after,
+.z3-lines-pink::after {
+  border-color: $color-pink;
+}
+
+.z3-line-brown::after,
+.z3-lines-brown::after {
+  border-color: $color-brown;
+}
+
+.z3-line-grey::after,
+.z3-lines-grey::after {
+  border-color: $color-grey;
+}
+
+.z3-line-gray::after,
+.z3-lines-gray::after {
+  border-color: $color-gray;
+}
+
+.z3-line-black::after,
+.z3-lines-black::after {
+  border-color: $color-black;
+}
+
+.z3-line-white::after,
+.z3-lines-white::after {
+  border-color: $color-white;
+}

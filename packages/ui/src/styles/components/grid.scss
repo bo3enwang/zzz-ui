@@ -1,0 +1,55 @@
+.z3-grid {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+
+  &.z3-grid-square {
+    overflow: hidden;
+  }
+
+  &.z3-grid-square > view {
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  @for $i from 1 through 5 {
+    &.z3-grid-cols-#{$i} > view {
+      display: block;
+      width: percentage((10 / ($i * 10)));
+    }
+  }
+
+  &.z3-grid-cols-1.z3-grid-square > view {
+    height: 0;
+    padding-bottom: 100%;
+    margin-right: 0;
+  }
+
+  &.z3-grid-cols-2.z3-grid-square > view {
+    width: calc((100% - 20px) / 2);
+    height: 0;
+    padding-bottom: calc((100% - 20px) / 2);
+  }
+  &.z3-grid-cols-3.z3-grid-square > view {
+    width: calc((100% - 40px) / 3);
+    height: 0;
+    padding-bottom: calc((100% - 40px) / 3);
+  }
+  &.z3-grid-cols-4.z3-grid-square > view {
+    width: calc((100% - 60px) / 4);
+    height: 0;
+    padding-bottom: calc((100% - 60px) / 4);
+  }
+  &.z3-grid-cols-5.z3-grid-square > view {
+    width: calc((100% - 80px) / 5);
+    height: 0;
+    padding-bottom: calc((100% - 80px) / 5);
+  }
+
+  &.z3-grid-square > view:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,12 @@
+.space {
+  display: block;
+  &.default {
+    height: 30px;
+  }
+  &.small {
+    height: 20px;
+  }
+  &.large {
+    height: 40px;
+  }
+}

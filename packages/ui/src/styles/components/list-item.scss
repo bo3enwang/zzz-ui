@@ -1,0 +1,66 @@
+@import "../helps/color.scss";
+
+.z3-list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  transition: background-color 0.3s;
+  &:active {
+    background-color: $color-gray;
+  }
+
+  :last-child:after {
+    border: none;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    content: " ";
+    border-bottom: 1px solid #ddd;
+    border-radius: inherit;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  &__title {
+    color: #000;
+  }
+
+  &__thumb {
+    width: 80px;
+    height: 80px;
+    padding: 16px 0;
+    margin-right: 15px;
+    overflow: hidden;
+    .z3-icon {
+      margin: 10px;
+      font-size: 40px;
+    }
+  }
+
+  &__note {
+    color: #888;
+  }
+
+  &__extra {
+    color: #888;
+  }
+}

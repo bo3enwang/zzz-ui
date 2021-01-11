@@ -1,0 +1,115 @@
+@import "../helps/variables.scss";
+
+$rootClass: z3-button;
+
+$btn-height-sm: 44px;
+$btn-height-md: 60px;
+$btn-height-lg: 76px;
+
+.z3-button {
+  position: relative;
+  display: inline-block;
+  min-width: 120px;
+  color: #646464;
+  vertical-align: middle;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+
+  // 按钮内图标
+
+  .z3-icon {
+    margin-right: 3px;
+  }
+
+  &[class*="-default"] {
+    .z3-icon {
+      font-size: $font-size-md;
+    }
+  }
+
+  &[class*="-small"] {
+    .z3-icon {
+      font-size: $font-size-sm;
+    }
+  }
+
+  &[class*="-large"] {
+    .z3-icon {
+      font-size: $font-size-lg;
+    }
+  }
+
+  // 块级按钮
+
+  &.block {
+    display: block;
+    font-size: 15px * $hd;
+  }
+
+  &.z3-button-plain {
+    border: 1px solid;
+  }
+
+  // 按钮大小 Size
+
+  &.#{$rootClass}-default {
+    height: $btn-height-md;
+    padding: 8px 15px;
+    font-size: $font-size-md;
+    line-height: $line-height-base;
+  }
+
+  &.#{$rootClass}-small {
+    height: $btn-height-sm;
+    padding: 5px 13px;
+    font-size: $font-size-sm;
+    line-height: $line-height-base;
+  }
+
+  &.#{$rootClass}-large {
+    height: $btn-height-lg;
+    padding: 16px 20px;
+    font-size: $font-size-lg;
+    line-height: $line-height-base;
+  }
+
+  // 按钮类型 Type
+
+  &.default {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  }
+
+  &.dashed {
+    color: rgba(0, 0, 0, 0.85);
+    background: #fff;
+    border-color: #d9d9d9;
+    border-style: dashed;
+    border-width: 1px;
+  }
+
+  // 按钮禁用状态
+
+  &[disabled] {
+    opacity: 0.6;
+  }
+
+  &:not([disabled]):active {
+    // color: inherit !important;
+    // background: inherit !important;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    transition-delay: 0s;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &.round {
+    border-top-left-radius: 999px;
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    border-bottom-left-radius: 999px;
+  }
+}

@@ -1,0 +1,50 @@
+.z3-product-action {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background: #fff;
+
+  &__icons {
+    display: flex;
+    height: 100%;
+  }
+
+  &__buttons {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 96px;
+    height: 100%;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    .z3-icon {
+      font-size: 38px;
+    }
+  }
+
+  &__button:first-child {
+    .z3-button {
+      border-top-left-radius: 999px;
+      border-bottom-left-radius: 999px;
+    }
+  }
+  &__button:last-child {
+    .z3-button {
+      border-top-right-radius: 999px;
+      border-bottom-right-radius: 999px;
+    }
+  }
+  &__button {
+    flex: 1;
+  }
+}

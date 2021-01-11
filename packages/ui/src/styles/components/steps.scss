@@ -1,0 +1,61 @@
+.z3-steps {
+  display: flex;
+
+  &__item {
+    position: relative;
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+
+    .z3-icon {
+      display: block;
+      font-size: 40px;
+      line-height: 80px;
+    }
+  }
+}
+
+.z3-steps .z3-steps__item::before,
+.z3-steps .z3-steps__item::after,
+.z3-steps.steps-arrow .z3-steps__item::before,
+.z3-steps.steps-arrow .z3-steps__item::after {
+  position: absolute;
+  top: 40px;
+  left: calc(0rpx - (100% - 80px) / 2);
+  z-index: 0;
+  display: block;
+  width: calc(100% - 80px);
+  height: 0px;
+  content: "";
+  border-bottom: 1px solid #ccc;
+}
+
+.z3-steps.steps-arrow .z3-steps__item::before,
+.z3-steps.steps-arrow .z3-steps__item::after {
+  top: 0;
+  bottom: 0;
+  height: 30px;
+  margin: auto;
+  font-family: "z3Icon";
+  line-height: 30px;
+  color: #ccc;
+  content: "\e6a3";
+  border-bottom-width: 0px;
+}
+
+.z3-steps.steps-bottom .z3-steps__item::before,
+.z3-steps.steps-bottom .z3-steps__item::after {
+  top: initial;
+  bottom: 40px;
+}
+
+.z3-steps .z3-steps__item::after {
+  width: 0px;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.z3-steps .z3-steps__item:first-child::before,
+.z3-steps .z3-steps__item:first-child::after {
+  display: none;
+}

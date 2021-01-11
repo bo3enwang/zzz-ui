@@ -1,0 +1,9 @@
+.z3-list + .z3-list {
+  margin-top: 30px;
+}
+.z3-list {
+  > &-item {
+    transition: all 0.6s ease-in-out 0s;
+    transform: translateX(upx);
+  }
+}

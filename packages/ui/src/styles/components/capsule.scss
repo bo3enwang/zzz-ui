@@ -1,0 +1,44 @@
+.z3-capsule + .z3-capsule {
+  margin-left: 10px;
+}
+
+.z3-capsule {
+  display: inline-flex;
+  vertical-align: middle;
+
+  .z3-tag + .z3-tag {
+    margin: 0;
+  }
+}
+
+.z3-capsule .z3-tag[class*="line-"]:last-child::after {
+  border-left: 0px solid transparent;
+}
+
+.z3-capsule .z3-tag[class*="line-"]:first-child::after {
+  border-right: 0px solid transparent;
+}
+
+.z3-capsule.radius .z3-tag:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.z3-capsule.radius .z3-tag:last-child::after,
+.z3-capsule.radius .z3-tag[class*="line-"] {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.z3-capsule.round .z3-tag:first-child {
+  text-indent: 4px;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+}
+
+.z3-capsule.round .z3-tag:last-child::after,
+.z3-capsule.round .z3-tag:last-child {
+  text-indent: -4px;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+}

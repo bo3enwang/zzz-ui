@@ -1,0 +1,47 @@
+.z3-upload {
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // min-height: 100px;
+  // padding: 20px 0;
+  // padding: 1px 30px;
+
+  &__item {
+    &-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__operator {
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 200%;
+      height: 200%;
+      pointer-events: none;
+      content: " ";
+      border: 8px solid #eee;
+      border-radius: inherit;
+      transform: scale(0.5);
+      transform-origin: 0 0;
+    }
+    .z3-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      font-size: 52px;
+      color: #8799a3;
+    }
+  }
+}

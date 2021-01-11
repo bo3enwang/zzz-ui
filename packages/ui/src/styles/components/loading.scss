@@ -1,0 +1,114 @@
+@import "../helps/variables.scss";
+@import "../helps/color.scss";
+
+.z3-loading {
+  display: block;
+  line-height: 3em;
+  text-align: center;
+
+  &-line {
+    .z3-icon {
+      margin-right: 15px;
+    }
+  }
+
+  .load-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+    background-color: rgba($color: #000, $alpha: 0.1);
+
+    &__container {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 140px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 250px;
+      height: 250px;
+      margin: auto;
+      font-size: 28px;
+      line-height: 2.4em;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 0px 2000px rgba(0, 0, 0, 0.5);
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        width: 200px;
+        height: 200px;
+        font-size: 10px;
+        content: "";
+        border: 3px solid transparent;
+        border-color: transparent $color-blue transparent $color-blue;
+        border-radius: 100%;
+        transform-origin: 50% 50%;
+        animation: rotate-loading 1.5s linear 0s infinite normal;
+      }
+
+      &__title {
+        padding: 0;
+        margin: 10px 0 0 0;
+        font-size: $font-size-md;
+        font-weight: bold;
+        line-height: 1;
+        animation: loading-text-opacity 2s linear 0s infinite normal;
+      }
+
+      &__description {
+        padding: 0;
+        margin: 0;
+        font-size: $font-size-sm;
+        line-height: 1;
+      }
+
+      .ring {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: 0 auto;
+        border: 10px dashed #4b9cdb;
+        border-radius: 100%;
+        animation: kf_rotate 1.5s 0.3s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+      }
+
+      .icon {
+        font-size: $font-size-xxl;
+        animation: kf__jump 0.7s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes rotate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-text-opacity {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

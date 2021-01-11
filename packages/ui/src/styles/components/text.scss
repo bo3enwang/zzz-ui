@@ -1,0 +1,47 @@
+@import "../helps/variables.scss";
+
+.z3-text {
+  display: block;
+  &.text-size-xs {
+    font-size: $font-size-xs;
+  }
+
+  &.text-size-sm {
+    font-size: $font-size-sm;
+  }
+
+  &.text-size-md {
+    font-size: $font-size-md;
+  }
+
+  &.text-size-lg {
+    font-size: $font-size-lg;
+  }
+
+  &.text-size-xl {
+    font-size: $font-size-xl;
+  }
+
+  &.text-size-xxl {
+    font-size: $font-size-xxl;
+  }
+
+  &.text-size-sl {
+    font-size: $font-size-sl;
+  }
+
+  &.text-weight-bold {
+    font-weight: bold;
+  }
+
+  &.z3-text-inline {
+    display: inline;
+  }
+
+  // 类型
+  &.text-type-price::before {
+    margin-right: 4px;
+    font-size: 80%;
+    content: "¥";
+  }
+}

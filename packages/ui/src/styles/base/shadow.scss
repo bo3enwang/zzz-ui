@@ -1,0 +1,52 @@
+.shadow[class*="white"] {
+  --ShadowSize: 0 1px 6px;
+}
+
+.shadow-lg {
+  --ShadowSize: 0px 40px 100px 0px;
+}
+
+.shadow-warp {
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-warp:before,
+.shadow-warp:after {
+  position: absolute;
+  top: 20px;
+  bottom: 30px;
+  left: 20px;
+  z-index: -1;
+  width: 50%;
+  content: "";
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.2);
+  transform: rotate(-3deg);
+}
+
+.shadow-warp:after {
+  right: 20px;
+  left: auto;
+  transform: rotate(3deg);
+}
+
+.shadow-blur {
+  position: relative;
+}
+
+.shadow-blur::before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: inherit;
+  filter: blur(10px);
+  border-radius: inherit;
+  opacity: 0.4;
+  transform: scale(1, 1);
+  transform-origin: 0 0;
+}
