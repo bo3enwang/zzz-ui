@@ -6,6 +6,7 @@ import { classNames } from "../../helps/utils";
 
 interface SwiperItemProps {
   img: string;
+  onClick?: () => void;
 }
 
 type TaroSwperProps = Pick<
@@ -79,6 +80,11 @@ const Z3Swiper: React.FC<Z3SwiperProps> = ({
               cur: index === current,
             })}
             key={index}
+            onClick={() => {
+              if (item.onClick) {
+                item.onClick();
+              }
+            }}
           >
             <View className="z3-swiper-item__content">
               <Image src={item.img} mode="aspectFill"></Image>

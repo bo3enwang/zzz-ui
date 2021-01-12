@@ -6,6 +6,10 @@ import { ColorProps } from "../base";
 
 interface CardProps extends ViewProps {
   /**
+   * Card Body 样式
+   */
+  bodyStyle?: React.CSSProperties;
+  /**
    * 背景颜色
    */
   bgColor?: ColorProps;
@@ -44,6 +48,7 @@ const Card: React.FC<CardProps> = ({
   className,
   headStyle,
   cover,
+  bodyStyle,
   ...rest
 }) => {
   let head: React.ReactNode;
@@ -64,7 +69,9 @@ const Card: React.FC<CardProps> = ({
     <View className={classNames(className, "z3-card", `z3-content-bg-${bgColor}`)} {...rest}>
       {head}
       {coverDom}
-      <View className="z3-card__body">{children}</View>
+      <View className="z3-card__body" style={bodyStyle}>
+        {children}
+      </View>
     </View>
   );
 };
