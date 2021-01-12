@@ -13,7 +13,7 @@ import React from "react";
 import { View } from "@tarojs/components";
 import { classNames } from "../../helps/utils";
 const Card = (_a) => {
-    var { children, title, extra, bgColor = "white", className, headStyle, cover } = _a, rest = __rest(_a, ["children", "title", "extra", "bgColor", "className", "headStyle", "cover"]);
+    var { children, title, extra, bgColor = "white", className, headStyle, cover, bodyStyle } = _a, rest = __rest(_a, ["children", "title", "extra", "bgColor", "className", "headStyle", "cover", "bodyStyle"]);
     let head;
     if (title || extra) {
         head = (React.createElement(View, { className: "z3-card__header", style: headStyle },
@@ -25,7 +25,7 @@ const Card = (_a) => {
     return (React.createElement(View, Object.assign({ className: classNames(className, "z3-card", `z3-content-bg-${bgColor}`) }, rest),
         head,
         coverDom,
-        React.createElement(View, { className: "z3-card__body" }, children)));
+        React.createElement(View, { className: "z3-card__body", style: bodyStyle }, children)));
 };
 export default Card;
 //# sourceMappingURL=index.js.map

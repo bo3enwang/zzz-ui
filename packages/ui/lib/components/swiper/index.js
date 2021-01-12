@@ -26,7 +26,11 @@ const Z3Swiper = (_a) => {
         }, indicatorColor: indicatorColor, indicatorActiveColor: indicatorActiveColor }, rest), itemList.map((item, index) => {
         return (React.createElement(SwiperItem, { className: classNames("z3-swiper-item", {
                 cur: index === current,
-            }), key: index },
+            }), key: index, onClick: () => {
+                if (item.onClick) {
+                    item.onClick();
+                }
+            } },
             React.createElement(View, { className: "z3-swiper-item__content" },
                 React.createElement(Image, { src: item.img, mode: "aspectFill" }))));
     })));

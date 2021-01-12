@@ -3,6 +3,10 @@ import { ViewProps } from "@tarojs/components/types/View";
 import { ColorProps } from "../base";
 interface CardProps extends ViewProps {
     /**
+     * Card Body 样式
+     */
+    bodyStyle?: React.CSSProperties;
+    /**
      * 背景颜色
      */
     bgColor?: ColorProps;
