@@ -1,0 +1,57 @@
+@import "../helps/variables.scss";
+@import "../helps/color.scss";
+
+$z3-message-color: #fff !default;
+
+$z3-message-font-size: $font-size-base !default;
+
+$z3-message-bg-color: $color-info !default;
+
+$zindex-message: 1090 !default;
+
+.zc-message {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-message;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 10px;
+  font-size: $z3-message-font-size;
+  line-height: 1.5;
+  color: $z3-message-color;
+  text-align: center;
+  background: $z3-message-bg-color;
+  opacity: 0;
+  transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+  transform: translate3d(0, -100%, 0);
+  animation: ease both;
+
+  /* modifiers */
+  &--success {
+    background: $color-blue;
+  }
+
+  &--error {
+    background: $color-orange;
+  }
+
+  &--warning {
+    background: $color-yellow;
+  }
+
+  &--info {
+    background: $color-green;
+  }
+
+  &--show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &--hidden {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}

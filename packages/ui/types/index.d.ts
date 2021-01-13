@@ -11,6 +11,7 @@ export { default as Image } from "./components/image";
 export { default as InputNumber } from "./components/input-number";
 export { default as List } from "./components/list";
 export { default as Loading } from "./components/loading";
+export { default as Message } from "./components/message";
 export { default as Modal } from "./components/modal";
 export { default as NoticeBar } from "./components/notice-bar";
 export { default as Picker } from "./components/picker";
